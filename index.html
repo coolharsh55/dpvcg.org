@@ -16,6 +16,7 @@
 
     body {
       font-family: "Lato", Calibri, Tahoma, sans-serif;
+      background-color: rgb(255,250,250);
     }
     .container {
       max-width: 800px; 
@@ -23,6 +24,9 @@
     .header {
       margin-top: 6rem;
       text-align: center; 
+    }
+    .title {
+      color: #CC3333;
     }
     .value-prop {
       margin-top: 1rem; 
@@ -58,15 +62,22 @@
       border-top: 2px dashed lightgray;
       padding-top: 50px;
     }
+    a {
+      color: #FF3333;
+    }
   </style>
 </head>
 <body>
+  <div class="background">
+    <div class="rocket"></div>
+</div>
+
   <div class="container">
     <section class="header" style="margin-top: 6rem; text-align: center; margin-bottom: 100px;">
       <img id="logo" src="images/dpv_transparent.png">
       <h1 class="title">Data Privacy Vocabulary (DPV)</h1>
-      <h6 class="docs-header">Supercharge your legal compliance!</h6>
-      <h6 class="docs-header"><a href="https://w3id.org/dpv" class="button button-primary" style="background-color: red;">https://w3id.org/dpv</a></h6>
+      <h6 class="docs-header"><span id="rocket">🚀</span> Supercharge your legal compliance!</h6>
+      <h6 class="docs-header"><a href="https://w3id.org/dpv" class="button button-primary" style="background-color: #ff5733; color: white; font-weight: bold;">https://w3id.org/dpv</a></h6>
       <div class="value-props row">
         <div class="four columns value-prop">
           <img class="value-img" src="images/byte.png">
@@ -107,6 +118,50 @@
         <li>The data required by SeeThis service is stored in servers <i>technology</i> located in Ireland and USA <i>location &amp; jurisdiction</i>, and transferred between them (<i>cross-border transfer</i>).</li>
         <li>A border security agency uses CCTV (<i>technology</i>) images (<i>personal data</i>) to identify terrorist suspects (<i>purposes</i>) as authorised by national policy (<i>law &amp; jurisdiction</i>). They utilise image recognition (<i>AI capability</i>) to identity people (<i>technology function</i>) and use machine-learning (<i>AI technique</i>) to keep their database updated. They periodically check for potential errors (<i>consequence</i>) and have procedures (<i>organisational measure</i>) to avoid inaccurate arrests (<i>impact</i>).</li>
       </ul>
+    </section>
+    <section class="content">
+      <h2>What's in the DPV?</h2>
+      <p><a href="https://w3id.org/dpv">DPV</a> is the 'main' specification which provides the foundational framework upon which other 'extensions' are built. DPV contains the following concepts and taxonomies:</p>
+      <ol>
+        <li>Purposes e.g. Marketing, Service Provision, Compliance</li>
+        <li>Processing operations e.g. Collect, Store, Use, Share, Delete</li>
+        <li>Data e.g. Personal Data, Sensitive Data, Special Categories, Anonymised Data</li>
+        <li>Technical Measures e.g. Encryption, Access Control</li>
+        <li>Organisational Measures e.g. Notice, Policy, Assessments</li>
+        <li>Legal Basis e.g. Consent - including types and status, Contract, Legal Obligation</li>
+        <li>Context e.g. Location, Duration, Frequency, Necessity, Statuses</li>
+        <li>Processing Context e.g. Automation, Human Involvement, Storage Conditions, Data Source</li>
+        <li>Risk Assessment e.g. Risk and Mitigation Measure, Consequence and Impact</li>
+        <li>Rights e.g. Data Subject Right, Rights Exercise, Rights Fulfilment and Non-fulfilment</li>
+        <li>Rules e.g. Permission, Prohibition, Obligation</li>
+      </ol>
+      <p>Extending these are the following extensions:</p>
+      <ol>
+        <li><a href="https://w3id.org/dpv/pd">Personal Data (PD)</a> taxonomy with indication of Sensitive/Special Categories </li>
+        <li><a href="https://w3id.org/dpv/loc">Locations (LOC)</a> based on ISO 3166-2 for indicating Countries and Regions</li>
+        <li><a href="https://w3id.org/dpv/risk">Risk Assessment and Management (RISK)</a> concepts based on ISO 31000 series</li>
+        <li><a href="https://w3id.org/dpv/tech">Technology (TECH)</a> concepts to indicate Actors, Provision Method, Intended Use</li>
+        <li><a href="https://w3id.org/dpv/ai">AI</a> extends TECH with AI techniques, capabilities, lifecycle, risks, measures</li>
+        <li><a href="https://w3id.org/dpv/justifications">Justifications</a> for explaining why something should be or cannot be done</li>
+        <li><a href="https://w3id.org/dpv/legal">LEGAL</a> concepts - laws, authorities, adequacy decisions from jurisdictions, e.g.
+          <ol type="a">
+            <li><a href="https://w3id.org/dpv/legal/de">Germany (DE)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/eu">European Union (EU)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/gb">United Kingdom of Great Britain and Northern Ireland (GB)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/ie">Ireland (IE)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/in">India (IN)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/us">USA (US)</a></li>
+          </ol>
+          with the following specific laws defined in their own extensions:
+          <ol type="a">
+            <li><a href="https://w3id.org/dpv/legal/eu/gdpr">EU GDPR</a></li>
+            <li><a href="https://w3id.org/dpv/legal/eu/dga">EU Data Governance Act (DGA)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/eu/nis2">EU Network and Information Security Directive (NIS2)</a></li>
+            <li><a href="https://w3id.org/dpv/legal/eu/aiact">EU AI Act</a></li>
+            <li><a href="https://w3id.org/dpv/legal/eu/rights">EU Fundamental Rights</a></li>
+          </ol>
+        </li>
+      </ol>
     </section>
     <section class="content">
       <h2>How does DPV enable interoperability?</h2>
